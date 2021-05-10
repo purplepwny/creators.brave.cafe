@@ -2,95 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="description" content="The community webring for Brave Creators">
+<meta name="keywords" content="Webring, Cryptocurrency, Brave, Creator, BAT, Basic Attention Token">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brave Creators</title>
-<style>
-    body {
-        color:#fff;
-        background:#000;
-        margin:1em auto;
-        padding:1em;
-        max-width:55em;
-        font:16px sans-serif;
-    }
-    nav {
-        margin:0;
-        padding: 0;
-        font-size: 18px;
-    }
-    nav img {
-        height: 44px;
-    }
-    nav:after {
-        content:"";
-        display:table;
-        clear:both;
-    }
-    nav ul {
-        float: right;
-        padding:0; margin:0;
-        position: relative;
-    }
-    nav ul li {
-        margin: 0;
-        display:inline-block;
-        float: left;
-    }
-    nav a {
-        display:block;
-        padding:14px 20px;
-        text-decoration:none;
-    }
-    #logo {
-        display: block;
-        padding: 0 30px;
-        float: left;
-    }
-    #logo a {
-        margin: 0;
-        padding: 0;
-    }
-    #logo a:hover {
-        background-color: #000;
-    }
-    a{
-        color:#6c6;
-        text-decoration:none;
-    }
-    a:hover{
-        color:#c6c;
-    }
-    .creator_list{
-        column-count:1; <!--Change to 2 when more creators added-->
-    }
-    @media (min-width: 900px) {
-        .creator_list{column-count:1;}
-    }
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 1px;
-    }
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        border-radius: 0px;
-        padding-bottom: 0;
-        position: absolute;
-        z-index: 1;
-        left: 105%;
-    }
-    .tooltip:hover .tooltiptext {visibility: visible;}
-</style>
+<title>Brave Creator Webring</title>
+<link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 
 <body>
+
 <header>
-<nav>
-    <div id="logo"><a href="index.html"><img class="logo" src="logo_light.png"></a></div>
-    <ul class="menu">
-        <li><a href="#" onclick="randomUrl();" target="_blank">Random Creator</a></li>
-    </ul>
-</nav>
+    <nav>
+        <div id="logo"><a href="index.html"><img class="logo" src="logo_light.png"></a></div>
+        <ul class="menu">
+            <li><a href="#" onclick="randomUrl();" target="_blank">Random Creator</a></li>
+        </ul>
+    </nav>
 </header>
 
 <h1>Brave Creators</h1>
@@ -112,32 +39,19 @@
 <br/>
 
 <footer>
-<p>This webring is a place for Brave creators to share their work and promote others in the Brave ecosytem. To join, follow these steps:</p>
-<p>
-<ol>
-    <li>Join the <a href="https://creators.brave.com/sign-up">Brave Creator</a> program and add your website.</li>
-    <li>Add a link to <a href="https://creators.brave.cafe/">https://creators.brave.cafe/</a> on the home page, header, or footer of your website using a text link, our <a href="logo_light.png">light</a>, or <a href="logo_dark.png">dark</a> icons.</li>
-    <li>E-mail <a href="mailto:brave-admin@pbanks.net">brave-admin@pbanks.net</a> with a link to your website and a few words of description.</li>
-</ol>
-</p>
-
+    <p>This webring is a place for Brave creators to share their work and promote others in the Brave ecosytem. To join, follow these steps:</p>
+    <p><ol>
+        <li>Join the <a href="https://creators.brave.com/sign-up">Brave Creator</a> program and add your website.</li>
+        <li>Add a link to <a href="https://creators.brave.cafe/">https://creators.brave.cafe/</a> on the home page, header, or footer of your website using a text link, our <a href="logo_light.png">light</a>, or <a href="logo_dark.png">dark</a> icons.</li>
+        <li>E-mail <a href="mailto:brave-admin@pbanks.net">brave-admin@pbanks.net</a> with a link to your website and a few words of description.</li>
+    </ol></p>
 
 Copyright:&nbsp;&nbsp;&copy; 2021 Parker J. Banks<br/>
 License:&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 4.0</a>
 </footer>
 
+<script src="creators.js"></script>
 <script>
-    var urlArray = [
-        "https://brave.cafe/",
-        "https://pbanks.net/",
-        "https://www.guilhermepantoja.com/",
-        "https://carolpelu.com/",
-        "https://recipeasly.org/",
-        "https://ashkankamyab.com/",
-        "https://cubecube.org/",
-        "https://twitter.com/andrei_pestee",
-        "https://3dprintguides.com/"
-    ];
     function randomUrl() {
         var randomNumber = Math.floor(Math.random() * urlArray.length);
         var newUrl = urlArray[randomNumber];
